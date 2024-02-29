@@ -1,9 +1,14 @@
 import streamlit as st
 
-ana_url = "https://while-nalu-secretary-ana.hf.space"
-# 使用st.iframe函数显示外部Streamlit应用程序
-st.iframe(
-	app_url, 
-	width=850, 
-	height=450
-)
+# html
+ana_html = """
+<iframe
+	src="https://while-nalu-secretary-ana.hf.space"
+	frameborder="0"
+	width="850"
+	height="450"
+></iframe>
+"""
+
+# 使用st.markdown函数显示iframe
+st.markdown(ana_html, unsafe_allow_html=True)
